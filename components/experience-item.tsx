@@ -12,14 +12,14 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 type ExperienceItemProps = {
   title: string;
   companyName: string;
   companyUrl?: string;
-  companyImg: string;
+  companyImg: StaticImageData;
   skills: any[];
   tenure: {
     from: string;
