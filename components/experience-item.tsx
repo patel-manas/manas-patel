@@ -42,14 +42,12 @@ const ExperienceItem = (props: ExperienceItemProps) => {
         open={props.companyName === props.currentExp}
         onOpenChange={props.handleExperienceChange(props.companyName)}
       >
-        <CollapsibleTrigger className="w-full">
+        <CollapsibleTrigger className="w-full min-h-44">
           <CardHeader className="w-full">
             <CardTitle className="w-full">
               <div className="w-full flex flex-col items-center gap-8 md:flex-row md:justify-between">
                 <div
-                  className={`flex justify-start items-center w-${
-                    props?.styles?.logoWidth || 40
-                  } h-auto ${
+                  className={`flex justify-start items-center ${props?.styles?.logoWidth ? 'w-' + props?.styles?.logoWidth : 'w-40'} h-auto ${
                     props.showCompanyName ? "flex-col gap-4 pl-4" : ""
                   }`}
                 >

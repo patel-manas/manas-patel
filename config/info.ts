@@ -105,7 +105,7 @@ export const skills = [
     w: "2.5rem",
   },
   {
-    name: "Angular 2+",
+    name: "Angular",
     proficiency: "neutral",
     IconCmp: SiAngular,
     mh: "3.2rem",
@@ -123,7 +123,7 @@ export const skills = [
     w: "2.5rem",
   },
   {
-    name: "postgresql",
+    name: "SQL",
     proficiency: "neutral",
     IconCmp: SiPostgresql,
     mh: "3.2rem",
@@ -150,7 +150,7 @@ export const skills = [
     w: "2.5rem",
   },
   {
-    name: "googlecloud",
+    name: "GCP",
     proficiency: "beginer",
     IconCmp: SiGooglecloud,
     mh: "3.2rem",
