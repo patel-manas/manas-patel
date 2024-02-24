@@ -8,6 +8,13 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
+import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
@@ -47,7 +54,11 @@ const ExperienceItem = (props: ExperienceItemProps) => {
             <CardTitle className="w-full">
               <div className="w-full flex flex-col items-center gap-8 md:flex-row md:justify-between">
                 <div
-                  className={`flex justify-start items-center ${props?.styles?.logoWidth ? 'w-' + props?.styles?.logoWidth : 'w-40'} h-auto ${
+                  className={`flex justify-start items-center ${
+                    props?.styles?.logoWidth
+                      ? "w-" + props?.styles?.logoWidth
+                      : "w-40"
+                  } h-auto ${
                     props.showCompanyName ? "flex-col gap-4 pl-4" : ""
                   }`}
                 >
@@ -78,20 +89,29 @@ const ExperienceItem = (props: ExperienceItemProps) => {
           </CardContent>
           <CardFooter>
             <footer className="flex justify-start gap-8 ml-4 flex-wrap w-full">
-              {props.skills.map((Skill, index) => (
-                <span key={index}>
-                  <Skill className="h-[2.5rem] w-[2.5rem]" />
+              <TooltipProvider>
+                {props.skills.map((Skill, index) => (
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <span key={index} className=" cursor-pointer">
+                        <Skill.cmp className="h-[2.5rem] w-[2.5rem]" />
+                      </span>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>{Skill.name}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                ))}
+                <span className="ml-auto">
+                  <a
+                    href={props.companyUrl ?? ""}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaExternalLinkAlt className="h-[2rem] w-[2rem]" />
+                  </a>
                 </span>
-              ))}
-              <span className="ml-auto">
-                <a
-                  href={props.companyUrl ?? ""}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaExternalLinkAlt className="h-[2rem] w-[2rem]" />
-                </a>
-              </span>
+              </TooltipProvider>
             </footer>
           </CardFooter>
         </CollapsibleContent>

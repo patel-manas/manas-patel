@@ -15,6 +15,12 @@ import {
   SiSupabase,
   SiBrave,
 } from "react-icons/si";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 import { FaNode } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
@@ -60,23 +66,27 @@ export const SkillIcons = () => {
 
 export const SkillIconsCards = () => {
   return (
-    <div className=" dmsans grid md:grid-cols-5 grid-cols-4 dark:text-white text-black/80 gap-y-4 md:gap-x-6 xl:gap-x-12 gap-x-8">
-      {skills.map((skill) => {
-        return (
-          <div className="card_vanilla">
-            <div className="flex flex-col gap-4 p-2 justify-center items-center info text-xl text-left dark:bg-black/70 dark:hover:bg-black border bg-slate-100 duration-300 hover:bg-slate-200 dark:hover:border-gray-600 dark:border-gray-800 border-gray-300">
-              <div className="w-full flex justify-center items-center  ">
-                <span className="flex flex-row items-center justify-center w-full">
-                  <skill.IconCmp
-                    className={`h-1/2 w-1/2 hover:-translate-y-1 duration-300 dark:hover:text-teal-500  hover:text-purple-500`}
-                  />
-                </span>
-              </div>
-              <div>{skill.name}</div>
-            </div>
-          </div>
-        );
-      })}
+    <div className=" dmsans grid md:grid-cols-5 grid-cols-4 dark:text-white text-black/80 gap-y-4 md:gap-x-6 md:gap-y-14 xl:gap-x-12 gap-x-8">
+      <TooltipProvider>
+        {skills.map((skill) => {
+          return (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="w-full flex justify-center items-center">
+                  <span className="flex flex-row items-center justify-center w-full cursor-pointer">
+                    <skill.IconCmp
+                      className={` h-16 w-16 hover:-translate-y-1 duration-300 dark:hover:text-teal-500  hover:text-purple-500`}
+                    />
+                  </span>
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <div>{skill.name}</div>
+              </TooltipContent>
+            </Tooltip>
+          );
+        })}
+      </TooltipProvider>
     </div>
   );
 };

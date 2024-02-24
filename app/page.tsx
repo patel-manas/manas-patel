@@ -12,7 +12,7 @@ import Experiences from "@/components/experience";
 
 export default function Page(): JSX.Element {
   return (
-    <>
+    <main className=" px-16">
       <div className="2xl:mx-auto overflow-hidden">
         <div className="pl-0 md:pl-6 min-h-screen 2xl:min-h-[50rem]">
           <div className=" max-w-screen overflow-hidden">
@@ -25,9 +25,9 @@ export default function Page(): JSX.Element {
       <section id="about">
         <AboutMe />
       </section>
-      <section id="tools">
+      {/* <section id="tools">
         <Tools />
-      </section>
+      </section> */}
       <section id="skills">
         <Skills />
       </section>
@@ -41,6 +41,6 @@ export default function Page(): JSX.Element {
       <section id="footer">
         <SiteFooter />
       </section>
-    </>
+    </main>
   );
 }

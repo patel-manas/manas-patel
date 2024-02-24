@@ -23,6 +23,7 @@ import {
   SiGithubactions,
   SiWebpack,
   SiSwc,
+  SiApacheairflow,
 } from "react-icons/si";
 
 import TcsLogo from "public/images/tata-consultancy-services-1.svg";
@@ -202,13 +203,12 @@ export const experiences = [
     companyUrl: "https://www.apollo.io/",
     companyImg: ApolloIoLogo,
     skills: [
-      DiReact,
-      SiTypescript,
-      SiGooglecloud,
-      SiGithubactions,
-      SiGooglecloud,
-      SiWebpack,
-      SiSwc,
+      { cmp: DiReact, name: "React.js" },
+      { cmp: SiTypescript, name: "Typescript" },
+      { cmp: SiGooglecloud, name: "Google Cloud" },
+      { cmp: SiGithubactions, name: "Github actions" },
+      { cmp: SiWebpack, name: "Webpack" },
+      { cmp: SiSwc, name: "Swc" },
     ],
     styles: {
       logoWidth: 16,
@@ -229,7 +229,15 @@ export const experiences = [
     companyName: "Coinbase",
     companyImg: CoinbaseLogo,
     companyUrl: "https://www.coinbase.com/",
-    skills: [DiReact, SiTypescript, DiPython, SiGooglecloud, SiPostgresql],
+    skills: [
+      { cmp: DiReact, name: "React.js" },
+      { cmp: SiTypescript, name: "Typescript" },
+      { cmp: DiPython, name: "Python" },
+      { cmp: SiGooglecloud, name: "Google Cloud" },
+      { cmp: SiPostgresql, name: "PostgresSQL" },
+      { cmp: SiApacheairflow, name: "Apache Airflow" },
+    ],
+
     tenure: {
       from: "May, 2022",
       to: "Feb, 2023",
@@ -245,7 +253,12 @@ export const experiences = [
     companyName: "Walmart Labs",
     companyImg: WalmartLogo,
     companyUrl: "https://www.walmart.com/",
-    skills: [DiReact, SiTypescript, SiGraphql, SiNodedotjs],
+    skills: [
+      { cmp: DiReact, name: "React.js" },
+      { cmp: SiTypescript, name: "Typescript" },
+      { cmp: SiGraphql, name: "GraphQL" },
+      { cmp: SiNodedotjs, name: "Node.js" },
+    ],
     tenure: {
       from: "Nov, 2020",
       to: "Apr, 2022",
@@ -261,7 +274,12 @@ export const experiences = [
     companyImg: CiscoLogo,
     companyUrl:
       "https://www.cisco.com/site/us/en/products/networking/catalyst-center/index.html",
-    skills: [DiReact, DiJavascript, DiJqueryLogo, SiTypescript],
+    skills: [
+      { cmp: DiReact, name: "React.js" },
+      { cmp: DiJavascript, name: "Javascript" },
+      { cmp: DiJqueryLogo, name: "JQuery" },
+      { cmp: SiTypescript, name: "Typescript" },
+    ],
     tenure: {
       from: "Oct, 2019",
       to: "Nov, 2011",
@@ -278,7 +296,13 @@ export const experiences = [
     companyName: "TCS",
     companyImg: TcsLogo,
     companyUrl: "https://www.tcs.com/",
-    skills: [SiAngular, DiReact, SiTypescript, SiMongodb, SiDocker],
+    skills: [
+      { cmp: SiAngular, name: "Angular" },
+      { cmp: DiReact, name: "React.js" },
+      { cmp: SiTypescript, name: "Typescript" },
+      { cmp: SiMongodb, name: "MongoDB" },
+      { cmp: SiDocker, name: "Docker" },
+    ],
     tenure: {
       from: "Aug, 2016",
       to: "Oct, 2019",

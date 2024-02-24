@@ -16,18 +16,18 @@ function MainHead() {
       <NavMain />
       <div className="flex flex-row 2xl:justify-center">
         <div
-          className="flex flex-col items-center justify-center pl-5 absolute top-1/2 left-1/2 inset-0 transform -translate-x-1/2 -translate-y-1/2"
+          className=" w-max flex flex-col items-center justify-center pl-5 absolute top-1/2 left-1/2 inset-0 transform -translate-x-1/2 -translate-y-1/2"
           style={{ zIndex: 10 }}
         >
           <p
-            className="md:text-4xl sm:text-4xl dark:text-white/90 text-black flex flex-col text-4xl lg:text-5xl 2xl:text-5xl  md:mt-20 lg:mt-12 xl:text-6xl font-display max-w-[80%] text-left mb-"
+            className="md:text-4xl sm:text-4xl dark:text-white/90 text-black flex flex-col text-4xl lg:text-5xl 2xl:text-5xl  md:mt-20 lg:mt-12 xl:text-6xl font-display max-w-[80%] text-left mb-4"
             aria-label="Hello! I am Manas Patel"
             style={{ zIndex: 10 }}
           >
             Hello! I'm
           </p>
           <h1
-            className="md:text-[4.5rem] mt-2 md:flex-row sm:text-6xl dark:bg-clip-text dark:bg-gradient-to-b from-teal-400 to-blue-400 dark:text-transparent text-purple-600 flex flex-col text-6xl lg:text-[5.2rem] 2xl:text-[7rem] xl:text-8xl font-display 2xl:max-w-[100%] xl:max-w-6xl sm:max-w-3xl max-w-md md:max-w-7xl lg:max-w-6xl text-left mb-"
+            className="md:text-[4.5rem] mt-2 md:flex-row sm:text-6xl dark:bg-clip-text dark:bg-gradient-to-b from-teal-400 to-blue-400 dark:text-transparent text-purple-600 flex flex-col text-6xl lg:text-[5.2rem] 2xl:text-[7rem] xl:text-8xl font-display 2xl:max-w-[100%] xl:max-w-6xl sm:max-w-3xl max-w-md md:max-w-7xl lg:max-w-6xl text-left mb-4"
             aria-label={`Hello! I am ${full_name}`}
             style={{ zIndex: 10 }}
           >
